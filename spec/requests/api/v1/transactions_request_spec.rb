@@ -107,38 +107,38 @@ describe "Transactions API" do
       expect(data["data"]["attributes"]["updated_at"]).to eq @transaction_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
-    xit "by created_at" do
-      get "/api/v1/transactions/find?created_at=#{@transaction_2.created_at}"
-
-      expect(response).to be_successful
-
-      data = JSON.parse(response.body)
-      expect(data["data"]["id"]).to eq "#{@transaction_2.id}"
-      expect(data["data"]["type"]).to eq "transaction"
-      expect(data["data"]["attributes"]["id"]).to eq @transaction_2.id
-      expect(data["data"]["attributes"]["invoice_id"]).to eq @transaction_2.invoice_id
-      expect(data["data"]["attributes"]["credit_card_number"]).to eq @transaction_2.credit_card_number
-      expect(data["data"]["attributes"]["credit_card_expiration_date"]).to eq @transaction_2.credit_card_expiration_date
-      expect(data["data"]["attributes"]["result"]).to eq @transaction_2.result
-      expect(data["data"]["attributes"]["created_at"]).to eq @transaction_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @transaction_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    end
-
-    xit "by updated_at" do
-      get "/api/v1/transactions/find?updated_at=#{@transaction_3.updated_at}"
-
-      expect(response).to be_successful
-
-      data = JSON.parse(response.body)
-      expect(data["data"]["id"]).to eq "#{@transaction_3.id}"
-      expect(data["data"]["type"]).to eq "transaction"
-      expect(data["data"]["attributes"]["id"]).to eq @transaction_3.id
-      expect(data["data"]["attributes"]["invoice_id"]).to eq @transaction_3.invoice_id
-      expect(data["data"]["attributes"]["credit_card_number"]).to eq @transaction_3.credit_card_number
-      expect(data["data"]["attributes"]["credit_card_expiration_date"]).to eq @transaction_3.credit_card_expiration_date
-      expect(data["data"]["attributes"]["result"]).to eq @transaction_3.result
-      expect(data["data"]["attributes"]["created_at"]).to eq @transaction_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @transaction_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    end
+    # xit "by created_at" do
+    #   get "/api/v1/transactions/find?created_at=#{@transaction_2.created_at}"
+    #
+    #   expect(response).to be_successful
+    #
+    #   data = JSON.parse(response.body)
+    #   expect(data["data"]["id"]).to eq "#{@transaction_2.id}"
+    #   expect(data["data"]["type"]).to eq "transaction"
+    #   expect(data["data"]["attributes"]["id"]).to eq @transaction_2.id
+    #   expect(data["data"]["attributes"]["invoice_id"]).to eq @transaction_2.invoice_id
+    #   expect(data["data"]["attributes"]["credit_card_number"]).to eq @transaction_2.credit_card_number
+    #   expect(data["data"]["attributes"]["credit_card_expiration_date"]).to eq @transaction_2.credit_card_expiration_date
+    #   expect(data["data"]["attributes"]["result"]).to eq @transaction_2.result
+    #   expect(data["data"]["attributes"]["created_at"]).to eq @transaction_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    #   expect(data["data"]["attributes"]["updated_at"]).to eq @transaction_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    # end
+    #
+    # xit "by updated_at" do
+    #   get "/api/v1/transactions/find?updated_at=#{@transaction_3.updated_at}"
+    #
+    #   expect(response).to be_successful
+    #
+    #   data = JSON.parse(response.body)
+    #   expect(data["data"]["id"]).to eq "#{@transaction_3.id}"
+    #   expect(data["data"]["type"]).to eq "transaction"
+    #   expect(data["data"]["attributes"]["id"]).to eq @transaction_3.id
+    #   expect(data["data"]["attributes"]["invoice_id"]).to eq @transaction_3.invoice_id
+    #   expect(data["data"]["attributes"]["credit_card_number"]).to eq @transaction_3.credit_card_number
+    #   expect(data["data"]["attributes"]["credit_card_expiration_date"]).to eq @transaction_3.credit_card_expiration_date
+    #   expect(data["data"]["attributes"]["result"]).to eq @transaction_3.result
+    #   expect(data["data"]["attributes"]["created_at"]).to eq @transaction_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    #   expect(data["data"]["attributes"]["updated_at"]).to eq @transaction_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    # end
   end
 end

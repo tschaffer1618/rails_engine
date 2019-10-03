@@ -125,38 +125,38 @@ describe "Invoice_items API" do
       expect(data["data"]["attributes"]["updated_at"]).to eq @invoice_item_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
-    xit "by created_at" do
-      get "/api/v1/invoice_items/find?created_at=#{@invoice_item_3.created_at}"
-
-      expect(response).to be_successful
-
-      data = JSON.parse(response.body)
-      expect(data["data"]["id"]).to eq "#{@invoice_item_3.id}"
-      expect(data["data"]["type"]).to eq "invoice_item"
-      expect(data["data"]["attributes"]["id"]).to eq @invoice_item_3.id
-      expect(data["data"]["attributes"]["item_id"]).to eq @invoice_item_3.item_id
-      expect(data["data"]["attributes"]["invoice_id"]).to eq @invoice_item_3.invoice_id
-      expect(data["data"]["attributes"]["quantity"]).to eq @invoice_item_3.quantity
-      expect(data["data"]["attributes"]["unit_price"]).to eq @invoice_item_3.unit_price
-      expect(data["data"]["attributes"]["created_at"]).to eq @invoice_item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @invoice_item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    end
-
-    xit "by updated_at" do
-      get "/api/v1/invoice_items/find?updated_at=#{@invoice_item_1.updated_at}"
-
-      expect(response).to be_successful
-
-      data = JSON.parse(response.body)
-      expect(data["data"]["id"]).to eq "#{@invoice_item_1.id}"
-      expect(data["data"]["type"]).to eq "invoice_item"
-      expect(data["data"]["attributes"]["id"]).to eq @invoice_item_1.id
-      expect(data["data"]["attributes"]["item_id"]).to eq @invoice_item_1.item_id
-      expect(data["data"]["attributes"]["invoice_id"]).to eq @invoice_item_1.invoice_id
-      expect(data["data"]["attributes"]["quantity"]).to eq @invoice_item_1.quantity
-      expect(data["data"]["attributes"]["unit_price"]).to eq @invoice_item_1.unit_price
-      expect(data["data"]["attributes"]["created_at"]).to eq @invoice_item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @invoice_item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    end
+    # xit "by created_at" do
+    #   get "/api/v1/invoice_items/find?created_at=#{@invoice_item_3.created_at}"
+    #
+    #   expect(response).to be_successful
+    #
+    #   data = JSON.parse(response.body)
+    #   expect(data["data"]["id"]).to eq "#{@invoice_item_3.id}"
+    #   expect(data["data"]["type"]).to eq "invoice_item"
+    #   expect(data["data"]["attributes"]["id"]).to eq @invoice_item_3.id
+    #   expect(data["data"]["attributes"]["item_id"]).to eq @invoice_item_3.item_id
+    #   expect(data["data"]["attributes"]["invoice_id"]).to eq @invoice_item_3.invoice_id
+    #   expect(data["data"]["attributes"]["quantity"]).to eq @invoice_item_3.quantity
+    #   expect(data["data"]["attributes"]["unit_price"]).to eq @invoice_item_3.unit_price
+    #   expect(data["data"]["attributes"]["created_at"]).to eq @invoice_item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    #   expect(data["data"]["attributes"]["updated_at"]).to eq @invoice_item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    # end
+    #
+    # xit "by updated_at" do
+    #   get "/api/v1/invoice_items/find?updated_at=#{@invoice_item_1.updated_at}"
+    #
+    #   expect(response).to be_successful
+    #
+    #   data = JSON.parse(response.body)
+    #   expect(data["data"]["id"]).to eq "#{@invoice_item_1.id}"
+    #   expect(data["data"]["type"]).to eq "invoice_item"
+    #   expect(data["data"]["attributes"]["id"]).to eq @invoice_item_1.id
+    #   expect(data["data"]["attributes"]["item_id"]).to eq @invoice_item_1.item_id
+    #   expect(data["data"]["attributes"]["invoice_id"]).to eq @invoice_item_1.invoice_id
+    #   expect(data["data"]["attributes"]["quantity"]).to eq @invoice_item_1.quantity
+    #   expect(data["data"]["attributes"]["unit_price"]).to eq @invoice_item_1.unit_price
+    #   expect(data["data"]["attributes"]["created_at"]).to eq @invoice_item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    #   expect(data["data"]["attributes"]["updated_at"]).to eq @invoice_item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    # end
   end
 end

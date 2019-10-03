@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :customers do
         get '/find', to: 'find#show'
+        get '/find_all', to: 'find_all#index'
       end
 
       namespace :invoice_items do
