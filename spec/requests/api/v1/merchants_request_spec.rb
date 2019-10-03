@@ -24,8 +24,6 @@ describe "Merchants API" do
     expect(data["data"]["type"]).to eq "merchant"
     expect(data["data"]["attributes"]["id"]).to eq merchant.id
     expect(data["data"]["attributes"]["name"]).to eq merchant.name
-    expect(data["data"]["attributes"]["created_at"]).to eq merchant.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    expect(data["data"]["attributes"]["updated_at"]).to eq merchant.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   end
 
   describe "finds the first merchant" do
@@ -47,8 +45,6 @@ describe "Merchants API" do
       expect(data["data"]["type"]).to eq "merchant"
       expect(data["data"]["attributes"]["id"]).to eq @merchant_1.id
       expect(data["data"]["attributes"]["name"]).to eq @merchant_1.name
-      expect(data["data"]["attributes"]["created_at"]).to eq @merchant_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @merchant_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by name" do
@@ -61,8 +57,6 @@ describe "Merchants API" do
       expect(data["data"]["type"]).to eq "merchant"
       expect(data["data"]["attributes"]["id"]).to eq @merchant_2.id
       expect(data["data"]["attributes"]["name"]).to eq @merchant_2.name
-      expect(data["data"]["attributes"]["created_at"]).to eq @merchant_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @merchant_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     # xit "by created_at" do
@@ -75,8 +69,6 @@ describe "Merchants API" do
     #   expect(data["data"]["type"]).to eq "merchant"
     #   expect(data["data"]["attributes"]["id"]).to eq @merchant_3.id
     #   expect(data["data"]["attributes"]["name"]).to eq @merchant_3.name
-    #   expect(data["data"]["attributes"]["created_at"]).to eq @merchant_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    #   expect(data["data"]["attributes"]["updated_at"]).to eq @merchant_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     # end
     #
     # xit "by updated_at" do
@@ -89,8 +81,6 @@ describe "Merchants API" do
     #   expect(data["data"]["type"]).to eq "merchant"
     #   expect(data["data"]["attributes"]["id"]).to eq @merchant_1.id
     #   expect(data["data"]["attributes"]["name"]).to eq @merchant_1.name
-    #   expect(data["data"]["attributes"]["created_at"]).to eq @merchant_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    #   expect(data["data"]["attributes"]["updated_at"]).to eq @merchant_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     # end
   end
 end

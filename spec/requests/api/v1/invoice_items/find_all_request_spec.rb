@@ -29,8 +29,6 @@ describe "Invoice_items API" do
       expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_1.invoice_id
       expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_1.quantity
       expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_1.unit_price
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by item_id" do
@@ -48,8 +46,6 @@ describe "Invoice_items API" do
       expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_1.invoice_id
       expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_1.quantity
       expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_1.unit_price
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_item_2.id}"
       expect(data["data"][1]["type"]).to eq "invoice_item"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_item_2.id
@@ -57,8 +53,6 @@ describe "Invoice_items API" do
       expect(data["data"][1]["attributes"]["invoice_id"]).to eq @invoice_item_2.invoice_id
       expect(data["data"][1]["attributes"]["quantity"]).to eq @invoice_item_2.quantity
       expect(data["data"][1]["attributes"]["unit_price"]).to eq @invoice_item_2.unit_price
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_item_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_item_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][2]["id"]).to eq "#{@invoice_item_5.id}"
       expect(data["data"][2]["type"]).to eq "invoice_item"
       expect(data["data"][2]["attributes"]["id"]).to eq @invoice_item_5.id
@@ -66,8 +60,6 @@ describe "Invoice_items API" do
       expect(data["data"][2]["attributes"]["invoice_id"]).to eq @invoice_item_5.invoice_id
       expect(data["data"][2]["attributes"]["quantity"]).to eq @invoice_item_5.quantity
       expect(data["data"][2]["attributes"]["unit_price"]).to eq @invoice_item_5.unit_price
-      expect(data["data"][2]["attributes"]["created_at"]).to eq @invoice_item_5.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][2]["attributes"]["updated_at"]).to eq @invoice_item_5.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by invoice_id" do
@@ -85,8 +77,6 @@ describe "Invoice_items API" do
       expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_1.invoice_id
       expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_1.quantity
       expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_1.unit_price
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_item_3.id}"
       expect(data["data"][1]["type"]).to eq "invoice_item"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_item_3.id
@@ -94,8 +84,6 @@ describe "Invoice_items API" do
       expect(data["data"][1]["attributes"]["invoice_id"]).to eq @invoice_item_3.invoice_id
       expect(data["data"][1]["attributes"]["quantity"]).to eq @invoice_item_3.quantity
       expect(data["data"][1]["attributes"]["unit_price"]).to eq @invoice_item_3.unit_price
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by quantity" do
@@ -113,8 +101,6 @@ describe "Invoice_items API" do
       expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_2.invoice_id
       expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_2.quantity
       expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_2.unit_price
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_item_3.id}"
       expect(data["data"][1]["type"]).to eq "invoice_item"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_item_3.id
@@ -122,8 +108,6 @@ describe "Invoice_items API" do
       expect(data["data"][1]["attributes"]["invoice_id"]).to eq @invoice_item_3.invoice_id
       expect(data["data"][1]["attributes"]["quantity"]).to eq @invoice_item_3.quantity
       expect(data["data"][1]["attributes"]["unit_price"]).to eq @invoice_item_3.unit_price
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][2]["id"]).to eq "#{@invoice_item_4.id}"
       expect(data["data"][2]["type"]).to eq "invoice_item"
       expect(data["data"][2]["attributes"]["id"]).to eq @invoice_item_4.id
@@ -131,8 +115,6 @@ describe "Invoice_items API" do
       expect(data["data"][2]["attributes"]["invoice_id"]).to eq @invoice_item_4.invoice_id
       expect(data["data"][2]["attributes"]["quantity"]).to eq @invoice_item_4.quantity
       expect(data["data"][2]["attributes"]["unit_price"]).to eq @invoice_item_4.unit_price
-      expect(data["data"][2]["attributes"]["created_at"]).to eq @invoice_item_4.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][2]["attributes"]["updated_at"]).to eq @invoice_item_4.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][3]["id"]).to eq "#{@invoice_item_6.id}"
       expect(data["data"][3]["type"]).to eq "invoice_item"
       expect(data["data"][3]["attributes"]["id"]).to eq @invoice_item_6.id
@@ -140,8 +122,6 @@ describe "Invoice_items API" do
       expect(data["data"][3]["attributes"]["invoice_id"]).to eq @invoice_item_6.invoice_id
       expect(data["data"][3]["attributes"]["quantity"]).to eq @invoice_item_6.quantity
       expect(data["data"][3]["attributes"]["unit_price"]).to eq @invoice_item_6.unit_price
-      expect(data["data"][3]["attributes"]["created_at"]).to eq @invoice_item_6.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][3]["attributes"]["updated_at"]).to eq @invoice_item_6.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by unit_price" do
@@ -159,8 +139,6 @@ describe "Invoice_items API" do
       expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_4.invoice_id
       expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_4.quantity
       expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_4.unit_price
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_4.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_4.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_item_5.id}"
       expect(data["data"][1]["type"]).to eq "invoice_item"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_item_5.id
@@ -168,8 +146,6 @@ describe "Invoice_items API" do
       expect(data["data"][1]["attributes"]["invoice_id"]).to eq @invoice_item_5.invoice_id
       expect(data["data"][1]["attributes"]["quantity"]).to eq @invoice_item_5.quantity
       expect(data["data"][1]["attributes"]["unit_price"]).to eq @invoice_item_5.unit_price
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_item_5.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_item_5.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     # xit "by created_at" do
@@ -185,8 +161,6 @@ describe "Invoice_items API" do
     #   expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_3.invoice_id
     #   expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_3.quantity
     #   expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_3.unit_price
-    #   expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    #   expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     # end
     #
     # xit "by updated_at" do
@@ -202,8 +176,6 @@ describe "Invoice_items API" do
     #   expect(data["data"][0]["attributes"]["invoice_id"]).to eq @invoice_item_1.invoice_id
     #   expect(data["data"][0]["attributes"]["quantity"]).to eq @invoice_item_1.quantity
     #   expect(data["data"][0]["attributes"]["unit_price"]).to eq @invoice_item_1.unit_price
-    #   expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    #   expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     # end
   end
 end

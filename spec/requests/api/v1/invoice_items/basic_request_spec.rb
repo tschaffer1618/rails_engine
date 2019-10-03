@@ -27,7 +27,5 @@ describe "Invoice_items API" do
     expect(data["data"]["attributes"]["invoice_id"]).to eq invoice_item.invoice_id
     expect(data["data"]["attributes"]["quantity"]).to eq invoice_item.quantity
     expect(data["data"]["attributes"]["unit_price"]).to eq invoice_item.unit_price
-    expect(data["data"]["attributes"]["created_at"]).to eq invoice_item.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    expect(data["data"]["attributes"]["updated_at"]).to eq invoice_item.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   end
 end

@@ -21,8 +21,6 @@ describe "Customers API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @customer_1.id
       expect(data["data"][0]["attributes"]["first_name"]).to eq @customer_1.first_name
       expect(data["data"][0]["attributes"]["last_name"]).to eq @customer_1.last_name
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @customer_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @customer_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by first_name" do
@@ -38,15 +36,11 @@ describe "Customers API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @customer_1.id
       expect(data["data"][0]["attributes"]["first_name"]).to eq @customer_1.first_name
       expect(data["data"][0]["attributes"]["last_name"]).to eq @customer_1.last_name
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @customer_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @customer_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@customer_2.id}"
       expect(data["data"][1]["type"]).to eq "customer"
       expect(data["data"][1]["attributes"]["id"]).to eq @customer_2.id
       expect(data["data"][1]["attributes"]["first_name"]).to eq @customer_2.first_name
       expect(data["data"][1]["attributes"]["last_name"]).to eq @customer_2.last_name
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @customer_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @customer_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
   #
     it "by last_name" do
@@ -62,8 +56,6 @@ describe "Customers API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @customer_3.id
       expect(data["data"][0]["attributes"]["first_name"]).to eq @customer_3.first_name
       expect(data["data"][0]["attributes"]["last_name"]).to eq @customer_3.last_name
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @customer_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @customer_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
   #
   #   xit "by created_at" do
@@ -77,8 +69,6 @@ describe "Customers API" do
   #     expect(data["data"][0]["attributes"]["id"]).to eq @customer_1.id
   #     expect(data["data"][0]["attributes"]["first_name"]).to eq @customer_1.first_name
   #     expect(data["data"][0]["attributes"]["last_name"]).to eq @customer_1.last_name
-  #     expect(data["data"][0]["attributes"]["created_at"]).to eq @customer_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-  #     expect(data["data"][0]["attributes"]["updated_at"]).to eq @customer_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   #   end
   #
   #   xit "by updated_at" do
@@ -92,8 +82,6 @@ describe "Customers API" do
   #     expect(data["data"][0]["attributes"]["id"]).to eq @customer_2.id
   #     expect(data["data"][0]["attributes"]["first_name"]).to eq @customer_2.first_name
   #     expect(data["data"][0]["attributes"]["last_name"]).to eq @customer_2.last_name
-  #     expect(data["data"][0]["attributes"]["created_at"]).to eq @customer_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-  #     expect(data["data"][0]["attributes"]["updated_at"]).to eq @customer_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   #   end
   end
 end

@@ -25,8 +25,6 @@ describe "Invoices API" do
       expect(data["data"][0]["attributes"]["customer_id"]).to eq @invoice_1.customer_id
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @invoice_1.merchant_id
       expect(data["data"][0]["attributes"]["status"]).to eq @invoice_1.status
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by customer_id" do
@@ -43,16 +41,12 @@ describe "Invoices API" do
       expect(data["data"][0]["attributes"]["customer_id"]).to eq @invoice_1.customer_id
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @invoice_1.merchant_id
       expect(data["data"][0]["attributes"]["status"]).to eq @invoice_1.status
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_2.id}"
       expect(data["data"][1]["type"]).to eq "invoice"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_2.id
       expect(data["data"][1]["attributes"]["customer_id"]).to eq @invoice_2.customer_id
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @invoice_2.merchant_id
       expect(data["data"][1]["attributes"]["status"]).to eq @invoice_2.status
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by merchant_id" do
@@ -69,16 +63,12 @@ describe "Invoices API" do
       expect(data["data"][0]["attributes"]["customer_id"]).to eq @invoice_2.customer_id
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @invoice_2.merchant_id
       expect(data["data"][0]["attributes"]["status"]).to eq @invoice_2.status
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_3.id}"
       expect(data["data"][1]["type"]).to eq "invoice"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_3.id
       expect(data["data"][1]["attributes"]["customer_id"]).to eq @invoice_3.customer_id
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @invoice_3.merchant_id
       expect(data["data"][1]["attributes"]["status"]).to eq @invoice_3.status
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by status" do
@@ -95,24 +85,18 @@ describe "Invoices API" do
       expect(data["data"][0]["attributes"]["customer_id"]).to eq @invoice_1.customer_id
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @invoice_1.merchant_id
       expect(data["data"][0]["attributes"]["status"]).to eq @invoice_1.status
-      expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][1]["id"]).to eq "#{@invoice_2.id}"
       expect(data["data"][1]["type"]).to eq "invoice"
       expect(data["data"][1]["attributes"]["id"]).to eq @invoice_2.id
       expect(data["data"][1]["attributes"]["customer_id"]).to eq @invoice_2.customer_id
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @invoice_2.merchant_id
       expect(data["data"][1]["attributes"]["status"]).to eq @invoice_2.status
-      expect(data["data"][1]["attributes"]["created_at"]).to eq @invoice_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][1]["attributes"]["updated_at"]).to eq @invoice_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
       expect(data["data"][2]["id"]).to eq "#{@invoice_3.id}"
       expect(data["data"][2]["type"]).to eq "invoice"
       expect(data["data"][2]["attributes"]["id"]).to eq @invoice_3.id
       expect(data["data"][2]["attributes"]["customer_id"]).to eq @invoice_3.customer_id
       expect(data["data"][2]["attributes"]["merchant_id"]).to eq @invoice_3.merchant_id
       expect(data["data"][2]["attributes"]["status"]).to eq @invoice_3.status
-      expect(data["data"][2]["attributes"]["created_at"]).to eq @invoice_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-      expect(data["data"][2]["attributes"]["updated_at"]).to eq @invoice_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     # xit "by created_at" do
@@ -127,8 +111,6 @@ describe "Invoices API" do
     #   expect(data["data"][0]["attributes"]["customer_id"]).to eq @invoice_3.customer_id
     #   expect(data["data"][0]["attributes"]["merchant_id"]).to eq @invoice_3.merchant_id
     #   expect(data["data"][0]["attributes"]["status"]).to eq @invoice_3.status
-    #   expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    #   expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     # end
     #
     # xit "by updated_at" do
@@ -143,8 +125,6 @@ describe "Invoices API" do
     #   expect(data["data"][0]["attributes"]["customer_id"]).to eq @invoice_1.customer_id
     #   expect(data["data"][0]["attributes"]["merchant_id"]).to eq @invoice_1.merchant_id
     #   expect(data["data"][0]["attributes"]["status"]).to eq @invoice_1.status
-    #   expect(data["data"][0]["attributes"]["created_at"]).to eq @invoice_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    #   expect(data["data"][0]["attributes"]["updated_at"]).to eq @invoice_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     # end
   end
 end

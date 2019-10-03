@@ -25,7 +25,5 @@ describe "Customers API" do
     expect(data["data"]["attributes"]["id"]).to eq customer.id
     expect(data["data"]["attributes"]["first_name"]).to eq customer.first_name
     expect(data["data"]["attributes"]["last_name"]).to eq customer.last_name
-    expect(data["data"]["attributes"]["created_at"]).to eq customer.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
-    expect(data["data"]["attributes"]["updated_at"]).to eq customer.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   end
 end
