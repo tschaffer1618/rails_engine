@@ -1,7 +1,7 @@
-class Api::V1::Items::FindController < ApplicationController
+class Api::V1::Items::FindAllController < ApplicationController
 
-  def show
-    render json: ItemSerializer.new(Item.find_by(item_params))
+  def index
+    render json: ItemSerializer.new(Item.where(item_params))
   end
 
   private

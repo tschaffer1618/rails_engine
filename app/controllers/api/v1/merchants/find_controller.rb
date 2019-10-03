@@ -1,6 +1,6 @@
 class Api::V1::Merchants::FindController < ApplicationController
 
-  def find
+  def show
     render json: MerchantSerializer.new(Merchant.find_by(merchant_params))
   end
 
