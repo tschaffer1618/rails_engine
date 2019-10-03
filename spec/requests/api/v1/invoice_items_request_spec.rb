@@ -11,4 +11,19 @@ describe "Invoice_items API" do
     data = JSON.parse(response.body)
     expect(data["data"].count).to eq 3
   end
+
+  it "provides data for a single customer" do
+    invoice_item = create(:invoice_item)
+
+    get "/api/v1/invoice_items/#{invoice_item.id}"
+
+    expect(response).to be_successful
+
+    data = JSON.parse(response.body)
+    expect(data["data"]["id"]).to eq "#{invoice_item.id}"
+    expect(data["data"]["type"]).to eq "invoice_item"
+    expect(data["data"]["attributes"]["id"]).to eq invoice_item.id
+    expect(data["data"]["attributes"]["quantity"]).to eq invoice_item.quantity
+    expect(data["data"]["attributes"]["unit_price"]).to eq invoice_item.unit_price
+  end
 end
