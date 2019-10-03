@@ -1,21 +1,11 @@
 require 'rails_helper'
 
-describe "Items API" do
-  it "provides an item index" do
-    create_list(:item, 3)
-
-    get '/api/v1/items'
-
-    expect(response).to be_successful
-
-    data = JSON.parse(response.body)
-    expect(data["data"].count).to eq 3
-  end
-
-  it "provides data for a single item" do
+describe "Invoice_items API" do
+  it "provides data for the associated item of an invoice_item" do
     item = create(:item)
+    invoice_item = create(:invoice_item, item: item)
 
-    get "/api/v1/items/#{item.id}"
+    get "/api/v1/invoice_items/#{invoice_item.id}/item"
 
     expect(response).to be_successful
 
