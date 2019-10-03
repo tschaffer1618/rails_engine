@@ -24,6 +24,8 @@ describe "Invoices API" do
     expect(data["data"]["type"]).to eq "invoice"
     expect(data["data"]["attributes"]["id"]).to eq invoice.id
     expect(data["data"]["attributes"]["status"]).to eq invoice.status
+    expect(data["data"]["attributes"]["created_at"]).to eq invoice.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+    expect(data["data"]["attributes"]["updated_at"]).to eq invoice.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
   end
 
   describe "finds the first invoice" do
