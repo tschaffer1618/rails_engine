@@ -29,7 +29,7 @@ describe "Customers API" do
     expect(data["data"]["attributes"]["updated_at"]).to eq customer.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
   end
 
-  describe "finds a customer" do
+  describe "finds the first customer" do
     before(:each) do
       create_list(:customer, 3)
 
