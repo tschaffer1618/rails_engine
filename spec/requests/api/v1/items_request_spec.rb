@@ -26,8 +26,8 @@ describe "Items API" do
     expect(data["data"]["attributes"]["name"]).to eq item.name
     expect(data["data"]["attributes"]["description"]).to eq item.description
     expect(data["data"]["attributes"]["unit_price"]).to eq item.unit_price
-    expect(data["data"]["attributes"]["created_at"]).to eq item.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-    expect(data["data"]["attributes"]["updated_at"]).to eq item.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+    expect(data["data"]["attributes"]["created_at"]).to eq item.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+    expect(data["data"]["attributes"]["updated_at"]).to eq item.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   end
 
   describe "finds the first item" do
@@ -52,8 +52,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_1.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_1.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_1.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_1.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_1.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by name" do
@@ -69,8 +69,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_2.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_2.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_2.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_2.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_2.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by description" do
@@ -86,8 +86,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_3.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_3.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_3.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_3.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_3.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by unit_price" do
@@ -103,8 +103,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_1.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_1.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_1.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_1.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_1.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     it "by merchant_id" do
@@ -120,8 +120,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_2.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_2.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_2.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_2.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_2.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_2.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_2.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     xit "by created_at" do
@@ -137,8 +137,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_3.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_3.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_3.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_3.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_3.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_3.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_3.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
 
     xit "by updated_at" do
@@ -154,8 +154,8 @@ describe "Items API" do
       expect(data["data"]["attributes"]["description"]).to eq @item_1.description
       expect(data["data"]["attributes"]["unit_price"]).to eq @item_1.unit_price
       expect(data["data"]["attributes"]["merchant_id"]).to eq @item_1.merchant_id
-      expect(data["data"]["attributes"]["created_at"]).to eq @item_1.created_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
-      expect(data["data"]["attributes"]["updated_at"]).to eq @item_1.updated_at.strftime('%Y-%m-%dT%I:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["created_at"]).to eq @item_1.created_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
+      expect(data["data"]["attributes"]["updated_at"]).to eq @item_1.updated_at.strftime('%Y-%m-%dT%H:%M:%S.%LZ')
     end
   end
 end

@@ -1,6 +1,6 @@
 class Api::V1::Items::FindController < ApplicationController
 
-  def find
+  def show
     render json: ItemSerializer.new(Item.find_by(item_params))
   end
 
