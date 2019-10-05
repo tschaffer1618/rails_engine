@@ -25,6 +25,6 @@ describe "Items API" do
     expect(data["data"]["attributes"]["id"]).to eq item.id
     expect(data["data"]["attributes"]["name"]).to eq item.name
     expect(data["data"]["attributes"]["description"]).to eq item.description
-    expect(data["data"]["attributes"]["unit_price"]).to eq item.unit_price
+    expect(data["data"]["attributes"]["unit_price"]).to eq (item.unit_price.to_f / 100).to_s
   end
 end

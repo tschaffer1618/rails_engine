@@ -24,7 +24,7 @@ describe "Items API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @item_1.id
       expect(data["data"][0]["attributes"]["name"]).to eq @item_1.name
       expect(data["data"][0]["attributes"]["description"]).to eq @item_1.description
-      expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_1.unit_price
+      expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_1.unit_price.to_f / 100).to_s
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_1.merchant_id
     end
 
@@ -41,14 +41,14 @@ describe "Items API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @item_2.id
       expect(data["data"][0]["attributes"]["name"]).to eq @item_2.name
       expect(data["data"][0]["attributes"]["description"]).to eq @item_2.description
-      expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_2.unit_price
+      expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_2.unit_price.to_f / 100).to_s
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_2.merchant_id
       expect(data["data"][1]["id"]).to eq "#{@item_3.id}"
       expect(data["data"][1]["type"]).to eq "item"
       expect(data["data"][1]["attributes"]["id"]).to eq @item_3.id
       expect(data["data"][1]["attributes"]["name"]).to eq @item_3.name
       expect(data["data"][1]["attributes"]["description"]).to eq @item_3.description
-      expect(data["data"][1]["attributes"]["unit_price"]).to eq @item_3.unit_price
+      expect(data["data"][1]["attributes"]["unit_price"]).to eq (@item_3.unit_price.to_f / 100).to_s
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @item_3.merchant_id
     end
 
@@ -65,14 +65,14 @@ describe "Items API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @item_2.id
       expect(data["data"][0]["attributes"]["name"]).to eq @item_2.name
       expect(data["data"][0]["attributes"]["description"]).to eq @item_2.description
-      expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_2.unit_price
+      expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_2.unit_price.to_f / 100).to_s
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_2.merchant_id
       expect(data["data"][1]["id"]).to eq "#{@item_3.id}"
       expect(data["data"][1]["type"]).to eq "item"
       expect(data["data"][1]["attributes"]["id"]).to eq @item_3.id
       expect(data["data"][1]["attributes"]["name"]).to eq @item_3.name
       expect(data["data"][1]["attributes"]["description"]).to eq @item_3.description
-      expect(data["data"][1]["attributes"]["unit_price"]).to eq @item_3.unit_price
+      expect(data["data"][1]["attributes"]["unit_price"]).to eq (@item_3.unit_price.to_f / 100).to_s
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @item_3.merchant_id
     end
 
@@ -89,14 +89,14 @@ describe "Items API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @item_1.id
       expect(data["data"][0]["attributes"]["name"]).to eq @item_1.name
       expect(data["data"][0]["attributes"]["description"]).to eq @item_1.description
-      expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_1.unit_price
+      expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_1.unit_price.to_f / 100).to_s
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_1.merchant_id
       expect(data["data"][1]["id"]).to eq "#{@item_4.id}"
       expect(data["data"][1]["type"]).to eq "item"
       expect(data["data"][1]["attributes"]["id"]).to eq @item_4.id
       expect(data["data"][1]["attributes"]["name"]).to eq @item_4.name
       expect(data["data"][1]["attributes"]["description"]).to eq @item_4.description
-      expect(data["data"][1]["attributes"]["unit_price"]).to eq @item_4.unit_price
+      expect(data["data"][1]["attributes"]["unit_price"]).to eq (@item_4.unit_price.to_f / 100).to_s
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @item_4.merchant_id
     end
 
@@ -113,14 +113,14 @@ describe "Items API" do
       expect(data["data"][0]["attributes"]["id"]).to eq @item_3.id
       expect(data["data"][0]["attributes"]["name"]).to eq @item_3.name
       expect(data["data"][0]["attributes"]["description"]).to eq @item_3.description
-      expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_3.unit_price
+      expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_3.unit_price.to_f / 100).to_s
       expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_3.merchant_id
       expect(data["data"][1]["id"]).to eq "#{@item_4.id}"
       expect(data["data"][1]["type"]).to eq "item"
       expect(data["data"][1]["attributes"]["id"]).to eq @item_4.id
       expect(data["data"][1]["attributes"]["name"]).to eq @item_4.name
       expect(data["data"][1]["attributes"]["description"]).to eq @item_4.description
-      expect(data["data"][1]["attributes"]["unit_price"]).to eq @item_4.unit_price
+      expect(data["data"][1]["attributes"]["unit_price"]).to eq (@item_4.unit_price.to_f / 100).to_s
       expect(data["data"][1]["attributes"]["merchant_id"]).to eq @item_4.merchant_id
     end
 
@@ -135,7 +135,7 @@ describe "Items API" do
     #   expect(data["data"][0]["attributes"]["id"]).to eq @item_3.id
     #   expect(data["data"][0]["attributes"]["name"]).to eq @item_3.name
     #   expect(data["data"][0]["attributes"]["description"]).to eq @item_3.description
-    #   expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_3.unit_price
+    #   expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_3.unit_price.to_f / 100).to_s
     #   expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_3.merchant_id
     # end
     #
@@ -150,7 +150,7 @@ describe "Items API" do
     #   expect(data["data"][0]["attributes"]["id"]).to eq @item_1.id
     #   expect(data["data"][0]["attributes"]["name"]).to eq @item_1.name
     #   expect(data["data"][0]["attributes"]["description"]).to eq @item_1.description
-    #   expect(data["data"][0]["attributes"]["unit_price"]).to eq @item_1.unit_price
+    #   expect(data["data"][0]["attributes"]["unit_price"]).to eq (@item_1.unit_price.to_f / 100).to_s
     #   expect(data["data"][0]["attributes"]["merchant_id"]).to eq @item_1.merchant_id
     # end
   end
