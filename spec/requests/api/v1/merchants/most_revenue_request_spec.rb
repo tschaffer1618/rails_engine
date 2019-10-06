@@ -42,10 +42,10 @@ describe "Merchants API" do
 
     data = JSON.parse(response.body)
     expect(data["data"].count).to eq 1
-    expect(data["data"][0]["id"]).to eq "#{merchant_3.id}"
+    expect(data["data"][0]["id"]).to eq "#{merchant_2.id}"
     expect(data["data"][0]["type"]).to eq "merchant"
-    expect(data["data"][0]["attributes"]["id"]).to eq merchant_3.id
-    expect(data["data"][0]["attributes"]["name"]).to eq merchant_3.name
+    expect(data["data"][0]["attributes"]["id"]).to eq merchant_2.id
+    expect(data["data"][0]["attributes"]["name"]).to eq merchant_2.name
 
     get "/api/v1/merchants/most_revenue?quantity=3"
 
@@ -53,17 +53,17 @@ describe "Merchants API" do
 
     data = JSON.parse(response.body)
     expect(data["data"].count).to eq 3
-    expect(data["data"][0]["id"]).to eq "#{merchant_3.id}"
+    expect(data["data"][0]["id"]).to eq "#{merchant_2.id}"
     expect(data["data"][0]["type"]).to eq "merchant"
-    expect(data["data"][0]["attributes"]["id"]).to eq merchant_3.id
-    expect(data["data"][0]["attributes"]["name"]).to eq merchant_3.name
-    expect(data["data"][1]["id"]).to eq "#{merchant_1.id}"
+    expect(data["data"][0]["attributes"]["id"]).to eq merchant_2.id
+    expect(data["data"][0]["attributes"]["name"]).to eq merchant_2.name
+    expect(data["data"][1]["id"]).to eq "#{merchant_3.id}"
     expect(data["data"][1]["type"]).to eq "merchant"
-    expect(data["data"][1]["attributes"]["id"]).to eq merchant_1.id
-    expect(data["data"][1]["attributes"]["name"]).to eq merchant_1.name
-    expect(data["data"][2]["id"]).to eq "#{merchant_2.id}"
+    expect(data["data"][1]["attributes"]["id"]).to eq merchant_3.id
+    expect(data["data"][1]["attributes"]["name"]).to eq merchant_3.name
+    expect(data["data"][2]["id"]).to eq "#{merchant_1.id}"
     expect(data["data"][2]["type"]).to eq "merchant"
-    expect(data["data"][2]["attributes"]["id"]).to eq merchant_2.id
-    expect(data["data"][2]["attributes"]["name"]).to eq merchant_2.name
+    expect(data["data"][2]["attributes"]["id"]).to eq merchant_1.id
+    expect(data["data"][2]["attributes"]["name"]).to eq merchant_1.name
   end
 end
