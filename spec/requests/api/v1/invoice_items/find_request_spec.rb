@@ -71,7 +71,7 @@ describe "Invoice_items API" do
     end
 
     it "by unit_price" do
-      get "/api/v1/invoice_items/find?unit_price=#{@invoice_item_2.unit_price}"
+      get "/api/v1/invoice_items/find?unit_price=#{((@invoice_item_2.unit_price.to_f) / 100).to_s}"
 
       expect(response).to be_successful
 
