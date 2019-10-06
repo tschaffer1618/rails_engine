@@ -8,8 +8,7 @@ class Merchant < ApplicationRecord
   validates_presence_of :name
 
   def self.most_revenue(quantity)
-    joins(:invoice_items, :transactions)
-    .where(transactions: {result: :success})
+    joins(:invoice_items)
     .group(:id)
     .select("merchants.*, sum(quantity * unit_price) AS revenue")
     .order('revenue desc')
@@ -17,10 +16,11 @@ class Merchant < ApplicationRecord
   end
 
   def self.total_daily_revenue(date)
-    joins(:invoices, :invoice_items, :transactions)
+    array = joins(:invoices, :invoice_items, :transactions)
     .where(transactions: {result: :success})
-    .where(invoice: {created_at: date})
-    .sum('quantity * unit_price')
+    .where(invoices: {created_at: date})
+    .pluck('sum(quantity * unit_price) AS total_revenue')
+    (array[0] / 100).to_s
   end
 
   def favorite_customer

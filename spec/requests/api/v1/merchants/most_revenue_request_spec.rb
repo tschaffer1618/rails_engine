@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Merchants API" do
-  xit "returns the top x merchants based on total revenue" do
+  it "returns the top x merchants based on total revenue" do
     # merchant_1_revenue = 800
     merchant_1 = create(:merchant)
       item_1 = create(:item, merchant: merchant_1, unit_price: 100)
