@@ -10,8 +10,8 @@ namespace :csv do
     Invoice.delete_all
     Merchant.delete_all
     Customer.delete_all
-    
-    CSV.foreach('db/sales_engine/data/customers.csv', headers: true) do |row|
+
+    CSV.foreach('db/data/customers.csv', headers: true) do |row|
       Customer.create({
         id: row[0],
         first_name: row[1],
@@ -21,7 +21,7 @@ namespace :csv do
       })
     end
 
-    CSV.foreach('db/sales_engine/data/merchants.csv', headers: true) do |row|
+    CSV.foreach('db/data/merchants.csv', headers: true) do |row|
       Merchant.create({
         id: row[0],
         name: row[1],
@@ -30,7 +30,7 @@ namespace :csv do
       })
     end
 
-    CSV.foreach('db/sales_engine/data/invoices.csv', headers: true) do |row|
+    CSV.foreach('db/data/invoices.csv', headers: true) do |row|
       Invoice.create({
         id: row[0],
         customer_id: row[1],
@@ -41,7 +41,7 @@ namespace :csv do
       })
     end
 
-    CSV.foreach('db/sales_engine/data/items.csv', headers: true) do |row|
+    CSV.foreach('db/data/items.csv', headers: true) do |row|
       Item.create({
         id: row[0],
         name: row[1],
@@ -53,7 +53,7 @@ namespace :csv do
       })
     end
 
-    CSV.foreach('db/sales_engine/data/invoice_items.csv', headers: true) do |row|
+    CSV.foreach('db/data/invoice_items.csv', headers: true) do |row|
       InvoiceItem.create({
         id: row[0],
         item_id: row[1],
@@ -65,7 +65,7 @@ namespace :csv do
       })
     end
 
-    CSV.foreach('db/sales_engine/data/transactions.csv', headers: true) do |row|
+    CSV.foreach('db/data/transactions.csv', headers: true) do |row|
       Transaction.create({
         id: row[0],
         invoice_id: row[1],
